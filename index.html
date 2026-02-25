@@ -8,6 +8,10 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
@@ -777,6 +781,298 @@
         .stats-grid {
           grid-template-columns: 1fr;
         }
+
+        .exp-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .edu-cards {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ── Resume Button ── */
+      .btn-resume {
+        padding: 1rem 2.2rem;
+        background: transparent;
+        color: var(--primary-light);
+        border: 2px solid var(--primary);
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+      }
+      .btn-resume:hover {
+        background: var(--gradient-1);
+        border-color: transparent;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(99, 102, 241, 0.35);
+      }
+
+      /* ── Skill Icons Grid ── */
+      .skill-icons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .skill-icon-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 1.5rem 1rem;
+        background: var(--bg-dark);
+        border: 1px solid var(--border);
+        border-radius: 1.2rem;
+        transition: all 0.3s ease;
+        cursor: default;
+      }
+      .skill-icon-item:hover {
+        border-color: var(--primary);
+        background: rgba(99, 102, 241, 0.08);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(99, 102, 241, 0.18);
+      }
+      .skill-icon-item i {
+        font-size: 3.6rem;
+        background: none;
+        -webkit-text-fill-color: unset;
+        color: inherit;
+      }
+      .skill-icon-item span {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        text-align: center;
+        font-weight: 500;
+      }
+      .skill-card h3 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .skill-card > i {
+        font-size: 3rem;
+        background: var(--gradient-1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ── Education Section ── */
+      .education {
+        background: var(--bg-card);
+      }
+      .edu-cards {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 3rem;
+      }
+      .edu-card {
+        background: var(--bg-dark);
+        border: 1px solid var(--border);
+        border-radius: 2rem;
+        padding: 3rem;
+        position: relative;
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+      .edu-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--gradient-1);
+        border-radius: 4px 0 0 4px;
+      }
+      .edu-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--primary);
+        box-shadow: 0 16px 48px rgba(99, 102, 241, 0.2);
+      }
+      .edu-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: rgba(99, 102, 241, 0.12);
+        border: 1px solid var(--primary);
+        color: var(--primary-light);
+        border-radius: 5rem;
+        padding: 0.5rem 1.4rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 1.8rem;
+      }
+      .edu-card h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      .edu-card h4 {
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+      }
+      .edu-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .edu-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 1.4rem;
+        color: var(--text-muted);
+      }
+      .edu-meta-item i {
+        color: var(--primary);
+        font-size: 1.8rem;
+        background: none;
+        -webkit-text-fill-color: unset;
+      }
+      .cgpa-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(34, 211, 238, 0.1);
+        border: 1px solid var(--secondary);
+        color: var(--secondary);
+        border-radius: 5rem;
+        padding: 0.4rem 1.2rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      /* ── Work Experience Section ── */
+      .experience {
+        background: var(--bg-dark);
+      }
+      .exp-timeline {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        position: relative;
+      }
+      .exp-timeline::before {
+        content: '';
+        position: absolute;
+        left: 24px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--primary), transparent);
+      }
+      .exp-item {
+        display: flex;
+        gap: 3rem;
+        position: relative;
+      }
+      .exp-dot {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--bg-card);
+        border: 2px solid var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+      .exp-dot i {
+        font-size: 2.2rem;
+        background: var(--gradient-1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .exp-card {
+        flex: 1;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 1.5rem;
+        padding: 2.5rem;
+        transition: all 0.3s ease;
+      }
+      .exp-card:hover {
+        border-color: var(--primary);
+        box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
+        transform: translateX(4px);
+      }
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 0.8rem;
+      }
+      .exp-header h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .exp-date {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(99, 102, 241, 0.12);
+        border: 1px solid var(--primary);
+        color: var(--primary-light);
+        border-radius: 5rem;
+        padding: 0.4rem 1.2rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .exp-role {
+        font-size: 1.5rem;
+        color: var(--secondary);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+      .exp-bullets {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .exp-bullets li {
+        color: var(--text-secondary);
+        font-size: 1.5rem;
+        line-height: 1.6;
+        padding-left: 1.8rem;
+        position: relative;
+      }
+      .exp-bullets li::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+      }
+      .exp-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.5rem;
       }
     </style>
   </head>
@@ -788,10 +1084,14 @@
         <nav class="navbar">
           <a href="#home" class="active">Home</a>
           <a href="#about">About</a>
+          <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
+        <a href="img/jibrilresume.pdf" download class="btn-resume">
+          <i class="bx bx-download"></i> Resume
+        </a>
         <i class="bx bx-menu" id="menu-icon"></i>
       </div>
     </header>
@@ -816,6 +1116,9 @@
               View My Work <i class="bx bx-right-arrow-alt"></i>
             </a>
             <a href="#contact" class="btn btn-secondary"> Get In Touch </a>
+            <a href="img/jibrilresume.pdf" download class="btn btn-secondary">
+              <i class="bx bx-download"></i> Download CV
+            </a>
           </div>
 
           <div class="social-links">
@@ -891,7 +1194,7 @@
 
       <div class="about-grid">
         <div class="about-image">
-          <img src="img/about.jpg" alt="Jibril Olajuwon" />
+          <img src="img/about.png" alt="Jibril Olajuwon" />
         </div>
 
         <div class="about-text">
@@ -926,7 +1229,96 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Education Section -->
+    <section class="education" id="education">
+      <div class="section-header">
+        <h2>My <span class="gradient-text">Education</span></h2>
+        <p>Academic background and qualifications</p>
+      </div>
+
+      <div class="edu-cards">
+        <div class="edu-card">
+          <div class="edu-badge"><i class="bx bx-buildings"></i> University</div>
+          <h3>Lagos State University</h3>
+          <h4>Bachelor of Computer Science</h4>
+          <div class="edu-meta">
+            <div class="edu-meta-item">
+              <i class="bx bx-calendar"></i>
+              <span>2024 – Present</span>
+            </div>
+            <div class="edu-meta-item">
+              <i class="bx bx-map-pin"></i>
+              <span>Lagos, Nigeria</span>
+            </div>
+            <div class="cgpa-badge">
+              <i class="bx bx-star"></i> CGPA: 4.20 / 5.0
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="experience" id="experience">
+      <div class="section-header">
+        <h2>Work <span class="gradient-text">Experience</span></h2>
+        <p>Professional journey and roles I've held</p>
+      </div>
+
+      <div class="exp-timeline">
+
+        <!-- Job 1 -->
+        <div class="exp-item">
+          <div class="exp-dot"><i class="bx bx-globe"></i></div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <h3>Upwork (Remote)</h3>
+              <span class="exp-date"><i class="bx bx-calendar"></i> 2024 – Present</span>
+            </div>
+            <p class="exp-role">Freelance Website Developer</p>
+            <ul class="exp-bullets">
+              <li>Communicating with clients to gather requirements, set timelines, and deliver custom web solutions.</li>
+              <li>Managing multiple projects simultaneously using Google Workspace and Slack for collaboration.</li>
+              <li>Providing continuous support and troubleshooting post-launch.</li>
+              <li>Maintaining clear communications between team members and clients via email and messaging.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="tag">Django</span>
+              <span class="tag">Python</span>
+              <span class="tag">React</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Google Workspace</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="exp-item">
+          <div class="exp-dot"><i class="bx bx-code-alt"></i></div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <h3>HiiT</h3>
+              <span class="exp-date"><i class="bx bx-calendar"></i> 2023 – 2024</span>
+            </div>
+            <p class="exp-role">Full-stack Website Developer Intern</p>
+            <ul class="exp-bullets">
+              <li>Developed back-end features like user authentication and RESTful APIs using Django REST framework.</li>
+              <li>Improved front-end UI/UX with Tailwind CSS and Bootstrap, ensuring mobile-friendly layouts.</li>
+              <li>Assisted in deploying apps to Heroku/Render and documented technical processes for future developers.</li>
+              <li>Collaborated with dev team to build and maintain responsive web applications using Django, Python, HTML, CSS, Tailwind and JavaScript.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="tag">Django REST</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Heroku</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
     <section class="skills" id="skills">
       <div class="section-header">
         <h2>Technical <span class="gradient-text">Skills</span></h2>
@@ -934,42 +1326,48 @@
       </div>
 
       <div class="skills-grid">
+
+        <!-- Frontend -->
         <div class="skill-card">
           <h3><i class="bx bx-code-alt"></i> Frontend</h3>
-          <ul class="skill-list">
-            <li>HTML5 <span class="skill-level">90%</span></li>
-            <li>CSS3 / Sass <span class="skill-level">90%</span></li>
-            <li>JavaScript <span class="skill-level">70%</span></li>
-            <li>Bootstrap 5 <span class="skill-level">90%</span></li>
-            <li>React</li>
-            <li>Typescript</li>
-            <li>TailwindCSS</li>
-          </ul>
+          <div class="skill-icons-grid">
+            <div class="skill-icon-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+            <div class="skill-icon-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+            <div class="skill-icon-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+            <div class="skill-icon-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+            <div class="skill-icon-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+            <div class="skill-icon-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+            <div class="skill-icon-item"><i class="devicon-tailwindcss-plain colored"></i><span>Tailwind</span></div>
+            <div class="skill-icon-item"><i class="devicon-sass-original colored"></i><span>Sass</span></div>
+          </div>
         </div>
 
+        <!-- Backend -->
         <div class="skill-card">
           <h3><i class="bx bx-server"></i> Backend</h3>
-          <ul class="skill-list">
-            <li>Python <span class="skill-level">85%</span></li>
-            <li>Django <span class="skill-level">85%</span></li>
-            <li>Django REST</li>
-            <li>REST APIs <span class="skill-level">75%</span></li>
-            <li>C#</li>
-            <li>PostgreSQL</li>
-          </ul>
+          <div class="skill-icons-grid">
+            <div class="skill-icon-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+            <div class="skill-icon-item"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+            <div class="skill-icon-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+            <div class="skill-icon-item"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
+            <div class="skill-icon-item"><i class="devicon-heroku-plain colored"></i><span>Heroku</span></div>
+            <div class="skill-icon-item"><i class="devicon-fastapi-plain colored"></i><span>REST APIs</span></div>
+          </div>
         </div>
 
+        <!-- Tools & Design -->
         <div class="skill-card">
-          <h3><i class="bx bx-palette"></i> Design & Tools</h3>
-          <ul class="skill-list">
-            <!-- <li>UI/UX Design <span class="skill-level">87%</span></li> -->
-            <li>Graphic Design <span class="skill-level">75%</span></li>
-            <li>Canva</li>
-            <li>Remini</li>
-            <li>Git & GitHub <span class="skill-level">80%</span></li>
-            <li>SEO Optimization <span class="skill-level">60%</span></li>
-          </ul>
+          <h3><i class="bx bx-palette"></i> Tools &amp; Design</h3>
+          <div class="skill-icons-grid">
+            <div class="skill-icon-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="skill-icon-item"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+            <div class="skill-icon-item"><i class="devicon-canva-original colored"></i><span>Canva</span></div>
+            <div class="skill-icon-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+            <div class="skill-icon-item"><i class="devicon-google-plain colored"></i><span>Google</span></div>
+            <div class="skill-icon-item"><i class="devicon-slack-plain colored"></i><span>Slack</span></div>
+          </div>
         </div>
+
       </div>
     </section>
 
